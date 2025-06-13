@@ -1,0 +1,26 @@
+{
+  "name": "glowrift-landing",
+  "version": "1.0.0",
+  "description": "Welcome to the landing page repo for **Glowrift** — an AI-powered holiday toolkit designed to help families, makers, and creatives bring seasonal traditions into the modern age.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ValenforgeStudio/glowrift-landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ValenforgeStudio/glowrift-landing/issues"
+  },
+  "homepage": "https://github.com/ValenforgeStudio/glowrift-landing#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}
