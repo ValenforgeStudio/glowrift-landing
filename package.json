@@ -7,10 +7,10 @@
     "doc": "docs"
   },
   "scripts": {
-  "start": "eleventy --serve",
-  "build:css": "tailwindcss -i ./assets/styles/tailwind.css -o ./dist/styles.css",
-  "build": "npm run build:css && eleventy"
-},
+    "start": "eleventy --serve",
+    "build:css": "tailwindcss -i ./assets/styles/tailwind.css -o ./dist/styles.css",
+    "build": "npm run build:css && eleventy"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ValenforgeStudio/glowrift-landing.git"
@@ -27,5 +27,8 @@
     "postcss": "^8.5.5",
     "postcss-cli": "^11.0.1",
     "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "luxon": "^3.6.1"
   }
 }
