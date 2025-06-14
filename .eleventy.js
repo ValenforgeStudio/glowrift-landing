@@ -6,11 +6,24 @@ module.exports = function(eleventyConfig) {
     return DateTime.now().toFormat("yyyy");
   });
 
-  // ✅ Pass through static assets (like your styles and images)
+  // ✅ Pass through static assets
   eleventyConfig.addPassthroughCopy("assets");
-
-  // ✅ Also pass through the compiled Tailwind output
   eleventyConfig.addPassthroughCopy("dist");
+
+  // ✅ Serve 404.html in dev
+  eleventyConfig.setBrowserSyncConfig({
+    callbacks: {
+      ready: function(err, bs) {
+const content_404 = require('fs').readFileSync('404.html');
+
+        bs.addMiddleware("*", (req, res) => {
+          res.writeHead(404, { "Content-Type": "text/html; charset=UTF-8" });
+          res.write(content_404);
+          res.end();
+        });
+      }
+    }
+  });
 
   return {
     dir: {
