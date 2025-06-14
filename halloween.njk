@@ -1,0 +1,32 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  <section class="text-center py-16">
+    <h1 class="text-4xl md:text-5xl font-display font-bold mb-4 text-sunset">
+      Welcome to Halloween at Glowrift 🎃
+    </h1>
+    <p class="text-lg text-gray-700 max-w-xl mx-auto mb-6">
+      Create a stunning pumpkin carving stencil with AI—upload your own image or enter a prompt to get started.
+    </p>
+
+    <div class="flex flex-col md:flex-row gap-6 justify-center items-center mt-10">
+      <a href="/halloween/stencil" class="bg-gold text-black px-6 py-3 rounded-full text-lg hover:bg-sunset-dark transition">
+        Upload or Generate
+      </a>
+      <a href="#examples" class="text-sunset hover:underline">
+        See Examples
+      </a>
+    </div>
+  </section>
+
+  <section id="examples" class="py-12 bg-gray-100 text-center">
+    <h2 class="text-2xl font-display font-bold mb-4">Preview Examples</h2>
+    <p class="text-gray-600 mb-8">These are samples of what Glowrift can generate—classic, spooky, and detailed stencils built by AI.</p>
+
+    <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <img src="/assets/images/example-ghost.png" alt="Ghost stencil" class="rounded shadow" />
+      <img src="/assets/images/example-cat.png" alt="Cat stencil" class="rounded shadow" />
+      <img src="/assets/images/example-witch.png" alt="Witch stencil" class="rounded shadow" />
+    </div>
+  </section>
+{% endblock %}

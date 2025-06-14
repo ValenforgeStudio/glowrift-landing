@@ -1,0 +1,63 @@
+<!-- components/layouts/base.njk -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glowrift</title>
+  <link rel="icon" href="/assets/images/favicon.ico" />
+  <link rel="stylesheet" href="/dist/styles.css" />
+</head>
+<body class="font-sans text-gray-900 bg-white">
+  <header class="p-4 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <a href="/" class="flex items-center space-x-2">
+<div class="h-12 flex items-center overflow-hidden">
+ <img src="/assets/images/Glowrift_Logo_Small.png" alt="Glowrift logo" class="h-9 md:h-10 w-auto" />
+</div>
+</a>
+      <nav class="space-x-4">
+        <a href="/" class="hover:underline">Home</a>
+        <a href="/halloween" class="hover:underline">Halloween</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-4">
+    
+  <section class="text-center py-16">
+    <h1 class="text-4xl md:text-5xl font-display font-bold mb-4 text-sunset">
+      Welcome to Halloween at Glowrift 🎃
+    </h1>
+    <p class="text-lg text-gray-700 max-w-xl mx-auto mb-6">
+      Create a stunning pumpkin carving stencil with AI—upload your own image or enter a prompt to get started.
+    </p>
+
+    <div class="flex flex-col md:flex-row gap-6 justify-center items-center mt-10">
+      <a href="/halloween/stencil" class="bg-gold text-black px-6 py-3 rounded-full text-lg hover:bg-sunset-dark transition">
+        Upload or Generate
+      </a>
+      <a href="#examples" class="text-sunset hover:underline">
+        See Examples
+      </a>
+    </div>
+  </section>
+
+  <section id="examples" class="py-12 bg-gray-100 text-center">
+    <h2 class="text-2xl font-display font-bold mb-4">Preview Examples</h2>
+    <p class="text-gray-600 mb-8">These are samples of what Glowrift can generate—classic, spooky, and detailed stencils built by AI.</p>
+
+    <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <img src="/assets/images/example-ghost.png" alt="Ghost stencil" class="rounded shadow" />
+      <img src="/assets/images/example-cat.png" alt="Cat stencil" class="rounded shadow" />
+      <img src="/assets/images/example-witch.png" alt="Witch stencil" class="rounded shadow" />
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="text-center p-4 mt-10 text-sm text-gray-500">
+   &copy; 2025 Glowrift. All rights reserved.
+  </footer>
+</body>
+</html>
