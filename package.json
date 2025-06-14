@@ -7,9 +7,10 @@
     "doc": "docs"
   },
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy"
-  },
+  "start": "eleventy --serve",
+  "build:css": "tailwindcss -i ./assets/styles/tailwind.css -o ./dist/styles.css",
+  "build": "npm run build:css && eleventy"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ValenforgeStudio/glowrift-landing.git"
