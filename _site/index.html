@@ -1,50 +1,90 @@
-<!-- glowrift.app index.html -->
+<!-- components/layouts/base.njk -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glowrift</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
-<link rel="shortcut icon" href="/assets/images/favicon/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png">
-<link href="assets/styles/output.css" rel="stylesheet">
+  <link rel="icon" href="/assets/images/favicon.ico" />
+  <link rel="stylesheet" href="/dist/styles.css" />
 </head>
-<body class="bg-gradient-to-b from-black via-sunset to-white text-white font-sans">
+<body class="font-sans text-gray-900 bg-white">
+  <header class="p-4 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <a href="/" class="flex items-center space-x-2">
+  <img src="assets\images\Glowrift_Logo.png" alt="Glowrift logo" class="h-40 w-auto" />
+</a>
+      <nav class="space-x-4">
+        <a href="/" class="hover:underline">Home</a>
+        <a href="/halloween" class="hover:underline">Halloween</a>
+      </nav>
+    </div>
+  </header>
 
-  <header class="absolute top-0 left-0 w-full px-6 py-4 flex justify-between items-center z-50">
-<div class="flex items-center">
- <img src="assets/images/Glowrift_Logo.png" alt="Glowrift Logo" class="h-16 sm:h-20 md:h-24 lg:h-32 xl:h-40 w-auto" />
-</div>
-  <nav class="hidden md:flex space-x-6 text-sm text-white/90 font-medium">
-    <a href="#" class="hover:text-white transition">Halloween</a>
-    <a href="#" class="hover:text-white transition">Thanksgiving</a>
-    <a href="#" class="hover:text-white transition">Christmas</a>
-    <a href="#" class="hover:text-gold transition">Login</a>
-  </nav>
-  <button class="md:hidden text-white focus:outline-none" aria-label="Toggle menu">
-    <!-- 🟠 Optional mobile menu icon could go here -->
-    ☰
-  </button>
-</header>
-   <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-16">
-    <h1 class="text-5xl md:text-6xl font-display font-bold text-gold drop-shadow-lg mb-6">
-      Craft Seasonal Magic
-    </h1>
-    <p class="max-w-xl text-lg text-white/90 mb-8">
-      Glowrift is your AI-powered holiday toolkit. Start with our pumpkin stencil generator—just in time for spooky season.
-    </p>
-    <a href="#" class="inline-block px-6 py-3 bg-sunset text-black font-semibold rounded-full shadow hover:bg-sunset-dark transition">
-      Start Creating
-    </a>
-  </section>
-  <footer class="w-full text-center text-sm text-black py-6 mt-16 bg-white">
-  <a href="https://valenforgestudio.com" target="_blank" class="font-semibold hover:underline">
-    Visit Valenforge Studio →
+  <main class="max-w-6xl mx-auto p-4">
+    
+  <section class="text-center py-16">
+  <h1 class="text-4xl md:text-5xl font-display font-bold mb-4">
+    Light the Season. Carve the Moment.
+  </h1>
+  <p class="text-lg text-gray-600 mb-6 font-sans">
+    Create stunning, AI-powered pumpkin carving stencils in seconds.
+  </p>
+  <a href="/halloween/stencil" class="inline-block bg-gold text-black px-6 py-3 rounded-full text-lg hover:bg-sunset-dark transition">
+    Try the Stencil Generator
   </a>
-</footer>
+</section>
+  <section class="py-12">
+  <h2 class="text-2xl font-display font-bold mb-6 text-center">Seasonal Tools</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="border p-4 rounded shadow hover:shadow-lg transition text-center">
+      <img src="/assets/images/halloween-icon.png" alt="Halloween" class="w-16 h-16 mx-auto mb-4" />
+      <h3 class="text-xl font-semibold mb-2">Halloween</h3>
+      <p class="text-gray-600 mb-3 font-sans">Generate custom pumpkin stencils using your own image or prompt.</p>
+      <a href="/halloween" class="text-sunset hover:underline">Explore Halloween</a>
+    </div>
+    <!-- Add Thanksgiving and Christmas later -->
+  </div>
+</section>
+  <section class="bg-gray-100 py-12">
+  <h2 class="text-2xl font-display font-bold mb-6 text-center">How It Works</h2>
+  <div class="grid md:grid-cols-3 gap-8 text-center font-sans">
+    <div>
+      <div class="text-4xl mb-2">📤</div>
+      <h3 class="font-semibold mb-2">Upload</h3>
+      <p>Choose an image or enter a prompt to start.</p>
+    </div>
+    <div>
+      <div class="text-4xl mb-2">🧠</div>
+      <h3 class="font-semibold mb-2">Generate</h3>
+      <p>Glowrift creates a beautiful, carve-ready stencil with AI.</p>
+    </div>
+    <div>
+      <div class="text-4xl mb-2">🎃</div>
+      <h3 class="font-semibold mb-2">Carve</h3>
+      <p>Download and bring it to life with your carving tools.</p>
+    </div>
+  </div>
+</section>
+  <section class="py-12 text-center bg-white">
+  <h2 class="text-xl font-display font-bold mb-6">What Users Are Saying</h2>
+  <blockquote class="italic text-gray-700 max-w-xl mx-auto font-sans">
+    “This saved me hours and the result blew my neighbors away!”<br/>
+    – Probably You
+  </blockquote>
+</section>
+  <section class="py-12 bg-black text-white text-center rounded mt-12">
+  <h2 class="text-2xl font-display font-bold mb-4">Ready to Glow?</h2>
+  <p class="mb-6 font-sans">Start creating your first stencil and light up the season.</p>
+  <a href="/halloween/stencil" class="inline-block bg-gold text-black px-6 py-3 rounded-full text-lg hover:bg-sunset-dark transition">
+    Get Started
+  </a>
+</section>
 
+  </main>
+
+  <footer class="text-center p-4 mt-10 text-sm text-gray-500">
+   &copy; 2025 Glowrift. All rights reserved.
+  </footer>
 </body>
 </html>

@@ -13,10 +13,13 @@
 <link href="assets/styles/output.css" rel="stylesheet">
 </head>
 <body class="bg-gradient-to-b from-black via-sunset to-white text-white font-sans">
-
-  {% include "header.njk" %}
+{% extends "layouts/base.njk" %}
+{% block content %}
   {% include "hero.njk" %}
-  {% include "footer.njk" %}
-
+  {% include "seasonal-tools.njk" %}
+  {% include "how-it-works.njk" %}
+  {% include "testimonial-strip.njk" %}
+  {% include "cta.njk" %}
+{% endblock %}
 </body>
 </html>
