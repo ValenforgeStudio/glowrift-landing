@@ -1,8 +1,11 @@
 module.exports = {
+  darkMode: 'class', // ✅ Enables manual dark mode toggle
   content: [
-    "./**/*.njk",
-    "./**/*.html",
-    "./**/*.js"
+    "./*.{njk,html,js}",
+    "./layouts/**/*.{njk,html,js}",
+    "./components/**/*.{njk,html,js}",
+    "./assets/scripts/**/*.{js}",
+    "!./dist/**/*" // 🚫 Exclude output directory to avoid infinite loops
   ],
   safelist: [
     'with-header-offset',
