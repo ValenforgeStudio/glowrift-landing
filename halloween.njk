@@ -1,7 +1,7 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-  <section class="text-center py-16 bg-glowrift-bg-light dark:bg-glowrift-bg-dark text-glowrift-text-light dark:text-glowrift-text-dark">
+  <section class="with-header-offset section-padding text-center bg-glowrift-bg-light dark:bg-glowrift-bg-dark text-glowrift-text-light dark:text-glowrift-text-dark">
     <h1 class="text-4xl md:text-5xl font-display font-bold mb-4 text-glowrift-accent">
       Welcome to Halloween at Glowrift 🎃
     </h1>
@@ -10,16 +10,16 @@
     </p>
 
     <div class="flex flex-col md:flex-row gap-6 justify-center items-center mt-10">
-      <a href="/halloween/stencil" class="bg-glowrift-primary text-black px-6 py-3 rounded-full text-lg hover:bg-glowrift-accent transition">
+      <a href="/halloween/stencil" class="glow-button">
         Upload or Generate
       </a>
-      <a href="#examples" class="text-glowrift-accent hover:underline transition">
+      <a href="#examples" class="glow-button-outline">
         See Examples
       </a>
     </div>
   </section>
 
-  <section id="examples" class="py-12 bg-glowrift-bg-light dark:bg-[#121212] text-glowrift-text-light dark:text-glowrift-text-dark text-center">
+  <section id="examples" class="section-padding bg-glowrift-bg-light dark:bg-[#121212] text-glowrift-text-light dark:text-glowrift-text-dark text-center">
     <h2 class="text-2xl font-display font-bold mb-4">Preview Examples</h2>
     <p class="mb-8 font-sans text-sm md:text-base text-glowrift-muted">
       These are samples of what Glowrift can generate—classic, spooky, and detailed stencils built by AI.

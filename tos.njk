@@ -1,7 +1,8 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-<section class="max-w-3xl mx-auto px-4 py-12 bg-white text-gray-900 dark:bg-gray-900 dark:text-white rounded-lg shadow">
+<div class="with-header-offset px-2">
+  <section class="glowrift-card max-w-3xl mx-auto mt-12">
   <h1 class="text-3xl font-display font-bold mb-6">Terms of Service</h1>
 
   <p class="mb-4">
@@ -35,7 +36,9 @@
 
   <h2 class="text-2xl font-display font-semibold mt-8 mb-2">6. Contact</h2>
   <p class="mb-4">
-    For questions regarding these terms, contact us at <a href="mailto:support@glowrift.app" class="text-sunset hover:underline">support@glowrift.app</a>.
+    For questions regarding these terms, contact us at 
+    <a href="mailto:support@glowrift.app" class="text-glowrift-accent hover:underline">support@glowrift.app</a>.
   </p>
 </section>
+</div>
 {% endblock %}

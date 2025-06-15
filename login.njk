@@ -1,7 +1,8 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-<section class="max-w-md mx-auto px-4 py-12 bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg shadow">
+<div class="with-header-offset px-2">
+  <section class="glowrift-card max-w-3xl mx-auto mt-12">
   <h1 class="text-3xl font-display font-bold mb-6 text-center">Login to Glowrift</h1>
 
   <form class="space-y-6">
@@ -26,4 +27,5 @@
     <button type="submit" class="w-full py-2 px-4 rounded bg-sunset text-white font-semibold hover:bg-sunset-dark transition">Login</button>
   </form>
 </section>
+</div>
 {% endblock %}
