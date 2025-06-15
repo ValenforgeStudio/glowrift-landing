@@ -6,10 +6,10 @@ eleventyExcludeFromCollections: true
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-<section class="flex flex-col items-center justify-center text-center py-24 px-6 text-white dark:text-white">
+<section class="flex flex-col items-center justify-center text-center py-24 px-6 bg-glowrift-bg-light dark:bg-glowrift-bg-dark text-glowrift-text-light dark:text-glowrift-text-dark">
   <h1 class="text-6xl font-display font-bold mb-4">404</h1>
-  <p class="text-xl mb-6">The page you’re looking for doesn’t exist or has moved.</p>
-  <a href="/" class="px-6 py-3 bg-sunset hover:bg-sunset-dark text-black font-semibold rounded transition">
+  <p class="text-xl mb-6 font-sans">The page you’re looking for doesn’t exist or has moved.</p>
+  <a href="/" class="px-6 py-3 bg-glowrift-primary hover:bg-glowrift-accent text-black font-semibold rounded-full transition">
     Return Home
   </a>
 </section>

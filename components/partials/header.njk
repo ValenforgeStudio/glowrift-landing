@@ -1,4 +1,4 @@
-<header class="absolute top-0 left-0 w-full px-6 py-4 flex justify-between items-center z-50">
+<header class="fixed top-0 left-0 w-full px-6 py-4 flex justify-between items-center z-50 h-header bg-glowrift-bg-light dark:bg-glowrift-bg-dark">
   <div class="flex items-center">
     <a href="/" class="flex items-center">
       <img src="/assets/images/Glowrift_Logo_Small.png" alt="Glowrift Logo" class="h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24 w-auto" />
@@ -6,39 +6,39 @@
   </div>
 
   <!-- Desktop Nav -->
-  <nav class="hidden md:flex space-x-6 text-sm text-white/90 font-medium">
-    <a href="/halloween" class="hover:text-white transition">Halloween</a>
-    <a href="/thanksgiving" class="hover:text-white transition">Thanksgiving</a>
-    <a href="/christmas" class="hover:text-white transition">Christmas</a>
-    <a href="/login" class="hover:text-gold transition">Login</a>
-    <button onclick="toggleTheme()" class="text-sm px-3 py-1 rounded border dark:text-white dark:border-gray-600">
+  <nav class="hidden md:flex space-x-6 text-sm text-glowrift-text-light dark:text-glowrift-text-dark font-medium">
+    <a href="/halloween" class="hover:text-glowrift-primary transition">Halloween</a>
+    <a href="/thanksgiving" class="hover:text-glowrift-primary transition">Thanksgiving</a>
+    <a href="/christmas" class="hover:text-glowrift-primary transition">Christmas</a>
+    <a href="/login" class="hover:text-glowrift-accent transition">Login</a>
+    <button onclick="toggleTheme()" class="text-sm px-3 py-1 rounded border border-glowrift-muted dark:text-glowrift-text-dark">
       <span class="block dark:hidden">☀️ Light</span>
       <span class="hidden dark:block">🌙 Dark</span>
     </button>
   </nav>
 
   <!-- Mobile Menu Button -->
-  <button onclick="toggleMobileMenu()" class="md:hidden text-white focus:outline-none" aria-label="Toggle menu">
-  ☰
-</button>
+  <button onclick="toggleMobileMenu()" class="md:hidden text-glowrift-text-light dark:text-glowrift-text-dark focus:outline-none" aria-label="Toggle menu">
+    ☰
+  </button>
 </header>
 
 <!-- Backdrop + Slide-Out Menu -->
 <div id="mobile-backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden" onclick="closeMobileMenu()"></div>
 
-<div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-gray-900 text-white px-6 py-6 shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-40 md:hidden">
+<div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-glowrift-bg-dark text-glowrift-text-dark px-6 py-6 shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-40 md:hidden">
   <div class="flex justify-end">
-    <button onclick="closeMobileMenu()" class="text-white text-2xl focus:outline-none" aria-label="Close menu">
+    <button onclick="closeMobileMenu()" class="text-glowrift-text-dark text-2xl focus:outline-none" aria-label="Close menu">
       &times;
     </button>
   </div>
   <nav class="flex flex-col space-y-4 mt-8">
-    <a href="/halloween" onclick="closeMobileMenu()" class="text-lg font-medium hover:text-sunset transition">Halloween</a>
-    <a href="/thanksgiving" onclick="closeMobileMenu()" class="text-lg font-medium hover:text-sunset transition">Thanksgiving</a>
-    <a href="/christmas" onclick="closeMobileMenu()" class="text-lg font-medium hover:text-sunset transition">Christmas</a>
-    <a href="/login" onclick="closeMobileMenu()" class="text-lg font-medium text-gold hover:text-sunset transition">Login</a>
+    <a href="/halloween" onclick="closeMobileMenu()" class="text-lg font-medium hover:text-glowrift-primary transition">Halloween</a>
+    <a href="/thanksgiving" onclick="closeMobileMenu()" class="text-lg font-medium hover:text-glowrift-primary transition">Thanksgiving</a>
+    <a href="/christmas" onclick="closeMobileMenu()" class="text-lg font-medium hover:text-glowrift-primary transition">Christmas</a>
+    <a href="/login" onclick="closeMobileMenu()" class="text-lg font-medium text-glowrift-accent hover:text-glowrift-primary transition">Login</a>
   </nav>
-  <button onclick="toggleTheme()" class="mt-8 w-full text-left border border-gray-700 dark:border-gray-600 text-white px-3 py-2 rounded-md">
+  <button onclick="toggleTheme()" class="mt-8 w-full text-left border border-glowrift-muted text-glowrift-text-dark px-3 py-2 rounded-md">
     <span class="block dark:hidden">☀️ Light Mode</span>
     <span class="hidden dark:block">🌙 Dark Mode</span>
   </button>

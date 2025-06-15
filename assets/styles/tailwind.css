@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ✅ Utility layer */
+@layer utilities {
+  .with-header-offset {
+    @apply pt-24 md:pt-32 lg:pt-40 xl:pt-48;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .glow-button {
+    @apply inline-block bg-glowrift-primary text-black px-6 py-3 rounded-full text-lg hover:bg-glowrift-accent transition;
+  }
+
+  .glow-button-outline {
+    @apply inline-block border border-glowrift-primary text-glowrift-primary px-6 py-3 rounded-full text-lg hover:bg-glowrift-accent hover:text-white transition;
+  }
+
+  .muted-text {
+    @apply text-glowrift-muted dark:text-glowrift-muted;
+  }
+
+  .headline {
+    @apply text-4xl md:text-5xl font-display font-bold mb-4;
+  }
+
+.subhead {
+  @apply text-lg mb-6 font-sans text-glowrift-muted dark:text-glowrift-muted;
+}
+
+  .theme-toggle {
+    @apply text-sm px-3 py-1 rounded border dark:text-white dark:border-gray-600;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium hover:text-white transition dark:hover:text-glowrift-primary;
+  }
+
+  .nav-link-mobile {
+    @apply text-lg font-medium hover:text-glowrift-accent transition;
+  }
+}
+
+/* ✅ Components layer — moved OUTSIDE of utilities */
+@layer components {
+  .glowrift-card {
+    @apply border border-glowrift-muted bg-glowrift-bg-light text-glowrift-text-light 
+           dark:bg-[#1a1a1a] dark:text-white 
+           p-6 rounded-xl shadow hover:shadow-lg transition text-center;
+  }
+}

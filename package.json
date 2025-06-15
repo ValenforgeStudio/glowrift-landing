@@ -7,6 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
+    "dev": "concurrently \"npm run build:css -- --watch\" \"eleventy --serve\"",
     "start": "eleventy --serve",
     "build:css": "tailwindcss -i ./assets/styles/tailwind.css -o ./dist/styles.css",
     "build": "npm run build:css && eleventy"
@@ -24,6 +25,7 @@
   "homepage": "https://github.com/ValenforgeStudio/glowrift-landing#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.1",
+    "concurrently": "^9.1.2",
     "postcss": "^8.5.5",
     "postcss-cli": "^11.0.1",
     "tailwindcss": "^3.4.17"
