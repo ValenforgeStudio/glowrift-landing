@@ -1,6 +1,6 @@
-const supabase = supabase.createClient(
+const supabase = window.supabase.createClient(
   'https://lhvkxmsnkwdcmdetjwkz.supabase.co',
-  '<eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxodmt4bXNua3dkY21kZXRqd2t6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAwMzk5MzcsImV4cCI6MjA2NTYxNTkzN30.dhXS1_e9ywlqa_JoBsGkN4J4XBfmakOmvROqIezZj8k>'
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxodmt4bXNua3dkY21kZXRqd2t6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAwMzk5MzcsImV4cCI6MjA2NTYxNTkzN30.dhXS1_e9ywlqa_JoBsGkN4J4XBfmakOmvROqIezZj8k'
 );
 
 const loginForm = document.getElementById('login-form');
