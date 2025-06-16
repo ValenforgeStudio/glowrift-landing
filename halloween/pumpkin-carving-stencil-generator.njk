@@ -1,0 +1,72 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<section class="with-header-offset px-6 py-12 text-glowrift-text-light dark:text-glowrift-text-dark bg-glowrift-bg-light dark:bg-glowrift-bg-dark">
+  <div class="max-w-3xl mx-auto text-center">
+    <h1 class="text-3xl md:text-5xl font-display font-bold mb-4 text-glowrift-accent">
+      AI Pumpkin Carving Stencil Generator
+    </h1>
+    <p class="text-base md:text-lg mb-8">
+      Upload a photo or enter a spooky prompt, and Glowrift will generate a printable carving stencil ready for your pumpkin masterpiece.
+    </p>
+  </div>
+
+<!-- Form Section -->
+<div class="max-w-2xl mx-auto glowrift-card space-y-6">
+  <!-- Upload -->
+  <div class="flex justify-center">
+    <label for="upload" class="sr-only">Upload an Image</label>
+    <input type="file" id="upload" name="upload" accept="image/*"
+      class="form-input w-full sm:w-auto text-glowrift-text-light dark:text-glowrift-text-dark bg-gray-50 dark:bg-gray-800 border rounded-md px-3 py-2" />
+  </div>
+
+  <!-- Divider -->
+  <div class="text-center text-xs text-glowrift-muted font-semibold uppercase">or</div>
+
+  <!-- Prompt -->
+  <div>
+    <label for="prompt" class="block text-sm font-semibold mb-1 text-center">Enter a Prompt</label>
+    <textarea id="prompt" name="prompt" rows="1"
+      class="form-input w-full resize-none rounded-md overflow-hidden text-glowrift-text-light dark:text-glowrift-text-dark bg-gray-50 dark:bg-gray-800 border px-3 py-2"
+      placeholder="e.g. haunted castle at night"
+      oninput="this.style.height = 'auto'; this.style.height = this.scrollHeight + 'px';"
+    ></textarea>
+  </div>
+
+  <!-- Difficulty -->
+  <div>
+    <label class="block text-sm font-semibold mb-2 text-center">Select Difficulty</label>
+    <div class="flex justify-center gap-x-20 text-sm">
+      <label class="flex items-center gap-1"><input type="radio" name="difficulty" value="easy" /> Easy</label>
+      <label class="flex items-center gap-1"><input type="radio" name="difficulty" value="medium" /> Medium</label>
+      <label class="flex items-center gap-1"><input type="radio" name="difficulty" value="hard" /> Advanced</label>
+    </div>
+  </div>
+
+  <!-- Style -->
+  <div>
+    <label class="block text-sm font-semibold mb-2 text-center">Choose a Style</label>
+    <div class="flex justify-center flex-wrap gap-x-20 gap-y-4 text-sm">
+      <label class="flex items-center gap-1"><input type="checkbox" name="style" value="spooky" /> Spooky</label>
+      <label class="flex items-center gap-1"><input type="checkbox" name="style" value="silly" /> Silly</label>
+      <label class="flex items-center gap-1"><input type="checkbox" name="style" value="classic" /> Classic</label>
+      <label class="flex items-center gap-1"><input type="checkbox" name="style" value="haunted" /> Haunted</label>
+    </div>
+  </div>
+
+  <!-- Button -->
+  <div class="text-center">
+    <button class="glow-button">Generate Stencil</button>
+  </div>
+</div>
+
+
+  <!-- Preview Placeholder -->
+  <div class="max-w-2xl mx-auto mt-12 text-center">
+    <h2 class="text-xl font-display font-bold mb-4">Stencil Preview</h2>
+    <div class="w-full aspect-[4/5] bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center text-glowrift-muted text-sm">
+      Your generated stencil will appear here
+    </div>
+  </div>
+</section>
+{% endblock %}

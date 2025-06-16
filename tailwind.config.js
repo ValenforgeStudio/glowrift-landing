@@ -18,7 +18,13 @@ module.exports = {
     'theme-toggle',
     'nav-link',
     'nav-link-mobile',
-    'glowrift-card'
+    'glowrift-card',
+    'form-label',
+    'form-input',
+    'form-radio',
+    'form-checkbox',
+    'form-section',
+    'form-button'
   ],
   theme: {
     extend: {

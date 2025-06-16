@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -51,5 +52,25 @@
     @apply border border-glowrift-muted bg-glowrift-bg-light text-glowrift-text-light 
            dark:bg-[#1a1a1a] dark:text-white 
            p-6 rounded-xl shadow hover:shadow-lg transition text-center;
+  }
+
+  .form-group {
+    @apply mb-6;
+  }
+
+  .form-label {
+    @apply block text-sm font-semibold mb-2 text-glowrift-text-light dark:text-glowrift-text-dark;
+  }
+
+  .form-input {
+    @apply w-full p-3 border border-gray-300 rounded-md bg-gray-50 dark:bg-gray-800 dark:border-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-glowrift-primary;
+  }
+
+  .form-divider {
+    @apply text-center font-semibold text-sm text-glowrift-muted;
+  }
+
+  .form-preview {
+    @apply w-full aspect-[4/5] bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center text-glowrift-muted text-sm;
   }
 }

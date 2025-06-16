@@ -105,75 +105,74 @@
 
   <main class="max-w-6xl mx-auto p-4">
     
-  <section class="with-header-offset section-padding text-center bg-glowrift-bg-light text-glowrift-text-light dark:bg-glowrift-bg-dark dark:text-glowrift-text-dark">
-  <h1 class="headline">Light the Season. Carve the Moment.</h1>
-  <p class="subhead">Create stunning, AI-powered pumpkin carving stencils in seconds.</p>
-  <a href="/halloween/pumpkin-carving-stencil-generator" class="glow-button">Try the Stencil Generator</a>
-</section>
-
-  <section class="py-12 bg-glowrift-bg-light dark:bg-glowrift-bg-dark text-glowrift-text-light dark:text-glowrift-text-dark">
-  <h2 class="text-2xl font-display font-bold mb-6 text-center">Seasonal Tools</h2>
-  <div class="grid md:grid-cols-3 gap-6">
-
-    <!-- Halloween Card -->
-    <div class="glowrift-card">
-      <img src="/assets/images/ghost.svg" alt="Halloween" class="w-16 h-16 mx-auto mb-4 brightness-110 dark:brightness-125" />
-      <h3 class="text-xl font-semibold mb-2">Halloween</h3>
-      <p class="mb-3 font-sans text-sm">Generate custom pumpkin stencils using your own image or prompt.</p>
-      <a href="/halloween" class="text-glowrift-accent hover:underline transition">Explore Halloween</a>
-    </div>
-
-    <!-- Thanksgiving Card -->
-    <div class="glowrift-card">
-      <img src="/assets/images/leaf.svg" alt="Thanksgiving" class="w-16 h-16 mx-auto mb-4 brightness-110 dark:brightness-125" />
-      <h3 class="text-xl font-semibold mb-2">Thanksgiving</h3>
-      <p class="mb-3 font-sans text-sm">Plan your perfect meal or table layout with smart seasonal tools.</p>
-      <a href="/thanksgiving" class="text-glowrift-accent hover:underline transition">Explore Thanksgiving</a>
-    </div>
-
-    <!-- Christmas Card -->
-    <div class="glowrift-card">
-      <img src="/assets/images/gift.svg" alt="Christmas" class="w-16 h-16 mx-auto mb-4 brightness-110 dark:brightness-125" />
-      <h3 class="text-xl font-semibold mb-2">Christmas</h3>
-      <p class="mb-3 font-sans text-sm">Get help with gifting, decorating, and capturing the holiday spirit.</p>
-      <a href="/christmas" class="text-glowrift-accent hover:underline transition">Explore Christmas</a>
-    </div>
-
+<section class="with-header-offset px-6 py-12 text-glowrift-text-light dark:text-glowrift-text-dark bg-glowrift-bg-light dark:bg-glowrift-bg-dark">
+  <div class="max-w-3xl mx-auto text-center">
+    <h1 class="text-3xl md:text-5xl font-display font-bold mb-4 text-glowrift-accent">
+      AI Pumpkin Carving Stencil Generator
+    </h1>
+    <p class="text-base md:text-lg mb-8">
+      Upload a photo or enter a spooky prompt, and Glowrift will generate a printable carving stencil ready for your pumpkin masterpiece.
+    </p>
   </div>
-</section>
-  <section class="bg-glowrift-bg-light dark:bg-glowrift-bg-dark py-12 text-glowrift-text-light dark:text-glowrift-text-dark">
-  <h2 class="text-2xl font-display font-bold mb-6 text-center">How It Works</h2>
-  <div class="grid md:grid-cols-3 gap-8 text-center font-sans">
-    <div>
-      <div class="text-4xl mb-2">📤</div>
-      <h3 class="font-semibold mb-2">Upload</h3>
-      <p>Choose an image or enter a prompt to start.</p>
-    </div>
-    <div>
-      <div class="text-4xl mb-2">🧠</div>
-      <h3 class="font-semibold mb-2">Generate</h3>
-      <p>Glowrift creates a beautiful, carve-ready stencil with AI.</p>
-    </div>
-    <div>
-      <div class="text-4xl mb-2">🎃</div>
-      <h3 class="font-semibold mb-2">Carve</h3>
-      <p>Download and bring it to life with your carving tools.</p>
+
+<!-- Form Section -->
+<div class="max-w-2xl mx-auto glowrift-card space-y-6">
+  <!-- Upload -->
+  <div class="flex justify-center">
+    <label for="upload" class="sr-only">Upload an Image</label>
+    <input type="file" id="upload" name="upload" accept="image/*"
+      class="form-input w-full sm:w-auto text-glowrift-text-light dark:text-glowrift-text-dark bg-gray-50 dark:bg-gray-800 border rounded-md px-3 py-2" />
+  </div>
+
+  <!-- Divider -->
+  <div class="text-center text-xs text-glowrift-muted font-semibold uppercase">or</div>
+
+  <!-- Prompt -->
+  <div>
+    <label for="prompt" class="block text-sm font-semibold mb-1 text-center">Enter a Prompt</label>
+    <textarea id="prompt" name="prompt" rows="1"
+      class="form-input w-full resize-none rounded-md overflow-hidden text-glowrift-text-light dark:text-glowrift-text-dark bg-gray-50 dark:bg-gray-800 border px-3 py-2"
+      placeholder="e.g. haunted castle at night"
+      oninput="this.style.height = 'auto'; this.style.height = this.scrollHeight + 'px';"
+    ></textarea>
+  </div>
+
+  <!-- Difficulty -->
+  <div>
+    <label class="block text-sm font-semibold mb-2 text-center">Select Difficulty</label>
+    <div class="flex justify-center gap-x-20 text-sm">
+      <label class="flex items-center gap-1"><input type="radio" name="difficulty" value="easy" /> Easy</label>
+      <label class="flex items-center gap-1"><input type="radio" name="difficulty" value="medium" /> Medium</label>
+      <label class="flex items-center gap-1"><input type="radio" name="difficulty" value="hard" /> Advanced</label>
     </div>
   </div>
-</section>
-  <section class="py-12 text-center bg-glowrift-bg-light dark:bg-glowrift-bg-dark text-glowrift-text-light dark:text-glowrift-text-dark">
-  <h2 class="text-xl font-display font-bold mb-6">What Users Are Saying</h2>
-  <blockquote class="italic text-glowrift-muted dark:text-glowrift-muted max-w-xl mx-auto font-sans">
-    “This saved me hours and the result blew my neighbors away!”<br/>
-    – Probably You
-  </blockquote>
-</section>
-  <section class="glowrift-card section-padding text-center mt-12">
-  <h2 class="headline text-2xl">Ready to Glow?</h2>
-  <p class="subhead mb-6">Start creating your first stencil and light up the season.</p>
-  <a href="/halloween/pumpkin-carving-stencil-generator/" class="glow-button">Get Started</a>
-</section>
 
+  <!-- Style -->
+  <div>
+    <label class="block text-sm font-semibold mb-2 text-center">Choose a Style</label>
+    <div class="flex justify-center flex-wrap gap-x-20 gap-y-4 text-sm">
+      <label class="flex items-center gap-1"><input type="checkbox" name="style" value="spooky" /> Spooky</label>
+      <label class="flex items-center gap-1"><input type="checkbox" name="style" value="silly" /> Silly</label>
+      <label class="flex items-center gap-1"><input type="checkbox" name="style" value="classic" /> Classic</label>
+      <label class="flex items-center gap-1"><input type="checkbox" name="style" value="haunted" /> Haunted</label>
+    </div>
+  </div>
+
+  <!-- Button -->
+  <div class="text-center">
+    <button class="glow-button">Generate Stencil</button>
+  </div>
+</div>
+
+
+  <!-- Preview Placeholder -->
+  <div class="max-w-2xl mx-auto mt-12 text-center">
+    <h2 class="text-xl font-display font-bold mb-4">Stencil Preview</h2>
+    <div class="w-full aspect-[4/5] bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center text-glowrift-muted text-sm">
+      Your generated stencil will appear here
+    </div>
+  </div>
+</section>
 
   </main>
 
