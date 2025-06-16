@@ -29,8 +29,8 @@ module.exports = {
           muted: '#AFAFAF',
           'text-light': '#1a1a1a',
           'text-dark': '#f5f5f5',
-          'bg-light': '#f0f0f0',
-          'bg-dark': '#0d0d0d',
+          'bg-light': '#F5EAD9',
+          'bg-dark': '#060603',
         }
       },
       fontFamily: {
