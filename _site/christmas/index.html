@@ -34,8 +34,32 @@
 <body class="font-sans text-glowrift-text-light bg-glowrift-bg-light dark:text-glowrift-text-dark dark:bg-glowrift-bg-dark">
   <header class="fixed top-0 left-0 h-20 w-full px-6 py-4 flex justify-between items-center z-50 h-header bg-glowrift-bg-light dark:bg-glowrift-bg-dark">
   <div class="flex items-center">
-    <a href="/" class="flex items-center">
-      <img src="/assets/images/Glowrift_Logo_Small.png" alt="Glowrift Logo" class="h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24 w-auto" />
+    <a href="/" class="flex items-center h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24 w-auto">
+      <!-- Light Mode Logo -->
+      <img
+        src="/assets/images/Glowrift_Logo_LightMode_240w.png"
+        srcset="
+          /assets/images/Glowrift_Logo_LightMode_240w.png 240w,
+          /assets/images/Glowrift_Logo_LightMode_320w.png 320w,
+          /assets/images/Glowrift_Logo_LightMode_600w.png 600w
+        "
+        sizes="(max-width: 768px) 240px, 320px"
+        alt="Glowrift Logo Light Mode"
+        class="block dark:hidden h-full w-auto"
+      />
+
+      <!-- Dark Mode Logo -->
+      <img
+        src="/assets/images/Glowrift_Logo_DarkMode_240w.png"
+        srcset="
+          /assets/images/Glowrift_Logo_DarkMode_240w.png 240w,
+          /assets/images/Glowrift_Logo_DarkMode_320w.png 320w,
+          /assets/images/Glowrift_Logo_DarkMode_600w.png 600w
+        "
+        sizes="(max-width: 768px) 240px, 320px"
+        alt="Glowrift Logo Dark Mode"
+        class="hidden dark:block h-full w-auto"
+      />
     </a>
   </div>
 
@@ -77,6 +101,7 @@
     <span class="hidden dark:block">🌙 Dark Mode</span>
   </button>
 </div>
+
 
   <main class="max-w-6xl mx-auto p-4">
     
