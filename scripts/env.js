@@ -1,0 +1,4 @@
+window.__GLOWRIFT_ENV__ = {
+  SUPABASE_URL: "https://lhvkxmsnkwdcmdetjwkz.supabase.co",
+  SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxodmt4bXNua3dkY21kZXRqd2t6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAxMTE4ODMsImV4cCI6MjA2NTY4Nzg4M30.rBVPSies2BOkcEbqWr374pibG-Cwp2rIO7OwtYWV78Y"
+};
