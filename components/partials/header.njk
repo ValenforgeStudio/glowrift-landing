@@ -34,7 +34,9 @@
     <a href="/halloween" class="hover:text-glowrift-primary transition">Halloween</a>
     <a href="/thanksgiving" class="hover:text-glowrift-primary transition">Thanksgiving</a>
     <a href="/christmas" class="hover:text-glowrift-primary transition">Christmas</a>
-    <a href="/login" class="hover:text-glowrift-accent transition">Login</a>
+    <button data-auth-trigger class="text-sm font-semibold hover:underline" aria-label="Open login modal">Login</button>
+    <button id="account-btn" class="text-sm font-semibold hover:underline hidden">Account</button>
+    <button id="logout-btn" class="text-sm font-semibold hover:underline hidden">Logout</button>
     <button onclick="toggleTheme()" class="text-sm px-3 py-1 rounded border border-glowrift-muted dark:text-glowrift-text-dark">
       <span class="block dark:hidden">☀️ Light</span>
       <span class="hidden dark:block">🌙 Dark</span>
@@ -60,7 +62,7 @@
     <a href="/halloween" onclick="closeMobileMenu()" class="text-lg font-medium hover:text-glowrift-primary transition">Halloween</a>
     <a href="/thanksgiving" onclick="closeMobileMenu()" class="text-lg font-medium hover:text-glowrift-primary transition">Thanksgiving</a>
     <a href="/christmas" onclick="closeMobileMenu()" class="text-lg font-medium hover:text-glowrift-primary transition">Christmas</a>
-    <a href="/login" onclick="closeMobileMenu()" class="text-lg font-medium text-glowrift-accent hover:text-glowrift-primary transition">Login</a>
+    <button data-auth-trigger onclick="closeMobileMenu()" class="text-left text-lg font-medium text-glowrift-accent hover:text-glowrift-primary transition" aria-label="Open login modal">Login</button>
   </nav>
   <button onclick="toggleTheme()" class="mt-8 w-full text-left border border-glowrift-muted text-glowrift-text-dark px-3 py-2 rounded-md">
     <span class="block dark:hidden">☀️ Light Mode</span>

@@ -4,6 +4,7 @@ module.exports = {
     "./*.{njk,html,js}",
     "./layouts/**/*.{njk,html,js}",
     "./components/**/*.{njk,html,js}",
+    "./partials/**/*.{njk,html,js}",
     "./assets/scripts/**/*.{js}",
     "!./dist/**/*" // 🚫 Exclude output directory to avoid infinite loops
   ],

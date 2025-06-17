@@ -14,6 +14,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("dist");
   eleventyConfig.addPassthroughCopy({ "scripts": "scripts" });
+  eleventyConfig.addPassthroughCopy("scripts/env.js");
+
 
   // ✅ Serve 404.html in dev
   eleventyConfig.setBrowserSyncConfig({

@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="/dist/styles.css" />
 </head>
 <body class="{{ bodyClass | default('font-sans text-glowrift-text-light bg-glowrift-bg-light dark:text-glowrift-text-dark dark:bg-glowrift-bg-dark') }}">
+  
   {% include "partials/header.njk" %}
 
   <main class="max-w-6xl mx-auto p-4">
@@ -40,6 +41,7 @@
 
   {% include "partials/footer.njk" %}
 
+  <!-- Scripts -->
   <script>
     function toggleTheme() {
       const isDark = document.documentElement.classList.toggle('dark');
@@ -64,11 +66,13 @@
     }
   </script>
 
-  <!-- Supabase CDN -->
-   <script src="/env.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <!-- Supabase -->
+  <script src="/scripts/env.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 
-  <!-- Custom Auth Logic -->
-   <script src="/scripts/auth.js"></script>
+  <!-- Auth Modal and Logic -->
+  {% include "partials/auth-modal.njk" %}
+  <script type="module" src="/scripts/auth.js"></script>
+
 </body>
 </html>
