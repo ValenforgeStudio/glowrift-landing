@@ -12,7 +12,7 @@ module.exports = function(eleventyConfig) {
 
   // ✅ Pass through static assets
   eleventyConfig.addPassthroughCopy("assets");
-  eleventyConfig.addPassthroughCopy({ "scripts": "scripts" });
+  eleventyConfig.addPassthroughCopy("scripts");
 
   // ✅ Serve 404.html in dev
   eleventyConfig.setBrowserSyncConfig({
