@@ -29,7 +29,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS -->
-  <link rel="stylesheet" href="/dist/styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body class="{{ bodyClass | default('font-sans text-glowrift-text-light bg-glowrift-bg-light dark:text-glowrift-text-dark dark:bg-glowrift-bg-dark') }}">
   
@@ -97,6 +97,7 @@
   {% include "partials/calendar-modal.njk" %}
   <script src="/scripts/ui.js"></script>
 
+  {% block scripts %}{% endblock %}
+  
 </body>
-<script defer src="https://analytics.vercel.com/script.js" data-api="/api/event" data-domain="glowrift.app"></script>
 </html>

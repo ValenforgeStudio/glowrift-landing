@@ -19,21 +19,42 @@
     </div>
 
     <div class="mt-8 text-right">
-      <button onclick="handleLogout()" class="bg-orange-600 hover:bg-orange-700 text-white font-semibold px-4 py-2 rounded-lg">
+      <button id="logout-button" class="bg-orange-600 hover:bg-orange-700 text-white font-semibold px-4 py-2 rounded-lg">
         Logout
       </button>
     </div>
   </div>
 </div>
+{% endblock %}
 
-<script>
-  async function handleLogout() {
-    const { data, error } = await supabase.auth.signOut();
-    if (!error) {
-      window.location.href = "/";
-    } else {
-      alert("Logout failed. Please try again.");
-    }
+{% block scripts %}
+<script type="module">
+  console.log("📜 dashboard/index.njk script block executing...");
+
+  import { supabase } from '/scripts/supabaseClient.js';
+  import { requireAuth } from '/scripts/authGuard.js';
+
+  console.log("✅ Imported modules, now calling requireAuth...");
+
+  requireAuth('/');
+
+  const logoutButton = document.getElementById('logout-button');
+  if (logoutButton) {
+    console.log("🔘 Logout button found, attaching click handler...");
+    logoutButton.addEventListener('click', async () => {
+      console.log("🚪 Logout button clicked...");
+      const { error } = await supabase.auth.signOut();
+      if (error) {
+        console.error("❌ Logout failed:", error);
+        alert('Logout failed. Please try again.');
+      } else {
+        console.log("✅ Logout successful, redirecting to home...");
+        window.location.href = '/';
+      }
+    });
+  } else {
+    console.warn("⚠️ Logout button not found in DOM.");
   }
 </script>
 {% endblock %}
+

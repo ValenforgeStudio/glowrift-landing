@@ -12,7 +12,6 @@ module.exports = function(eleventyConfig) {
 
   // ✅ Pass through static assets
   eleventyConfig.addPassthroughCopy("assets");
-  eleventyConfig.addPassthroughCopy("dist");
   eleventyConfig.addPassthroughCopy({ "scripts": "scripts" });
 
   // ✅ Serve 404.html in dev
@@ -35,7 +34,7 @@ module.exports = function(eleventyConfig) {
       input: ".",
       includes: "components",
       layouts: "components/layouts",
-      output: "_site"
+      output: "dist"
     }
   };
 };

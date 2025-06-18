@@ -5,7 +5,7 @@ module.exports = {
     "./layouts/**/*.{njk,html,js}",
     "./components/**/*.{njk,html,js}",
     "./partials/**/*.{njk,html,js}",
-    "./assets/scripts/**/*.{js}",
+    "./scripts/**/*.js",
     "!./dist/**/*" // 🚫 Exclude output directory to avoid infinite loops
   ],
   safelist: [
