@@ -66,10 +66,28 @@
     }
   </script>
 
-  <!-- Supabase -->
-  <script src="/scripts/env.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-  <script type="module" src="/scripts/account-ui.js"></script>
+<!-- Supabase v1.35.6 UMD – exposes `window.supabase.createClient` -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.6/dist/umd/supabase.min.js"></script>
+
+<!-- Environment + Client Bootstrap -->
+<script>
+  window.__GLOWRIFT_ENV__ = {
+    SUPABASE_URL: "https://lhvkxmsnkwdcmdetjwkz.supabase.co",
+    SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxodmt4bXNua3dkY21kZXRqd2t6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAxMTE4ODMsImV4cCI6MjA2NTY4Nzg4M30.rBVPSies2BOkcEbqWr374pibG-Cwp2rIO7OwtYWV78Y"
+  };
+
+  const { SUPABASE_URL, SUPABASE_ANON_KEY } = window.__GLOWRIFT_ENV__;
+
+  if (window.supabase?.createClient) {
+    window.supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY); // ✅ v1.x method
+    console.log("✅ Supabase initialized (v1.x)");
+  } else {
+    console.error("❌ Supabase v1.x library not ready");
+  }
+</script>
+
+<!-- Auth logic (safe now that supabase is ready) -->
+<script type="module" src="/scripts/account-ui.js"></script>
 
 
   <!-- Auth Modal and Logic -->

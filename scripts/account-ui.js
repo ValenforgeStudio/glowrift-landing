@@ -1,6 +1,5 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  const { data: { user } } = await supabase.auth.getUser();
-
+document.addEventListener("DOMContentLoaded", () => {
+  const user = supabase.auth.user(); // ✅ v1 method
   if (user) {
     document.getElementById("login-btn")?.classList.add("hidden");
     document.getElementById("mobile-login-btn")?.classList.add("hidden");
@@ -12,8 +11,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
+
 async function handleLogout() {
-  const { error } = await supabase.auth.signOut();
+  const { error } = await supabase.auth.signOut(); // ✅ same in v1
   if (!error) {
     window.location.href = "/";
   } else {
